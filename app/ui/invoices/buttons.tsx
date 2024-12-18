@@ -26,7 +26,8 @@ export function UpdateInvoice({ id }: { id: string }) {
 }
 
 export function DeleteInvoice({ id }: { id: string }) {
-  const deleteInvoiceWithId = () => {
+  const deleteInvoiceWithId = aynsc() => {
+    'use server'
     deleteInvoice(id)
   };
   return (
